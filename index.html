@@ -1,23 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--basic structure-->
 <head>
-    <header>
-        
-    </header>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE QUIZ</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <main>
-        <div>
+    <header id="header">
+        <div class="high-scores-link">
+            <p id="view-high-scores">View High Scores</p>
+        </div>
+        <div class="timer">
+            <p>Time:</p>
+            <!--60 seconds / 1min -->
+            <p id="timer">60</p>
+        </div>
+    </header>
 
+    <main id="main">
+        <div id="start-quiz-screen">
+            <h1>Coding Quiz</h1>
+            <p>
+                Answer the following code-related questions within the time limit.
+                <br /> Keep in mind that incorrect answers will penalize your score and time by ten seconds!
+            </p>
+            <button class="btn" id="start-quiz-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen">
+            <section class="question">
+                <h2 id="question"></h2>
+            </section>
+
+            <section class="answers">
+                <ol id="answers-list"></ol>
+            </section>
+
+            <section id="result-screen">
+                <hr />
+                <p id="result"></p>
+            </section>
+        </div>
+
+        <div id="complete-screen">
+            <h1>Quiz Completed!</h1>
+            <h2 id="final-score"></h2>
+            <br />
+            <h2 class="input-initials">Enter Initials:</h2>
+            <form id="high-score-form">
+                <input id="initials" type="text" required oninput="this.setCustomValidity('')"
+                oninvalid="this.setCustomValidity('Please enter your initials')" />
+                <button class="btn" id="intials-btn">Submit</button>
+            </form>
+        </div>
+
+        <div id="high-scores-screen">
+            <h1>High Scores</h1>
+            <ol id="high-scores-list"></ol>
+            <button class="btn" id="go-back-btn">Go Back</button>
+            <button class="btn" id="clear-high-scores-btn">
+                Clear High Scores
+            </button>
         </div>
     </main>
 
     <footer>
         <p>
-
+            I hope this works!
         </p>
     </footer>
     <script src="./assets/js/script.js"></script>
